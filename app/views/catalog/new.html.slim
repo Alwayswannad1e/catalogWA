@@ -1,0 +1,22 @@
+.container
+	.row
+		.col-md-6.col-md-offset-3
+
+			h1 Добавить животное
+			h2
+				=link_to "главная" , root_path
+			=form_for @animal , url: {action: "create"} do |f|
+				.form-group
+					=f.label :name ,"Имя"
+					=f.text_field :name , class:'form-control'
+				.form-group
+					=f.label :kingdom , "Царство"
+					=f.text_field :kingdom , class:'form-control'
+				.form-group
+					=f.label :kingdom , "Класс"
+					=f.text_field :a_class , class:'form-control'
+				.form-group
+					=f.label :kingdom , "Тип"
+					=f.text_field :phylum , class:'form-control'
+				.form-group
+					=f.submit "Добавить", class:"btn btn-success"

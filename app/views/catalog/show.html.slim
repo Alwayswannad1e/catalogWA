@@ -1,0 +1,16 @@
+.container
+	.row
+		.col-md-4
+			=link_to 'главная' , root_path
+		.col-md-8
+			=@animal.name 
+			br
+			| Царство :
+			=@animal.kingdom
+			br
+			| Класс :
+			=@animal.a_class
+			br
+			| Тип :
+			=@animal.phylum
+			br

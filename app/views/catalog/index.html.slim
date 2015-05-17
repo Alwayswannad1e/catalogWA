@@ -1,0 +1,26 @@
+
+.container
+	.row
+		.col-md-4
+			=link_to 'Добавить' , new_path , class:"btn btn-success"
+		.col-md-8
+			h1 Животные
+			-@animals.each do |animal|
+				| #
+				=link_to animal.id 	, animal
+				br
+				| Имя :
+				=animal.name 
+				br
+				| Царство :
+				=animal.kingdom
+				br
+				| Класс :
+				=animal.a_class
+				br
+				| Тип :
+				=animal.phylum
+				br
+				=link_to "delete",  animal , :method => "destroy" , class: "btn btn-danger"
+				hr
+				
